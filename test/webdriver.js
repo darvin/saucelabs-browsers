@@ -73,6 +73,11 @@ module.exports = function(browserOpts, callback) {
           isEqual = true;
         }
 
+        //android is stupid
+        if (capabilities.browserName.toLowerCase()=="android"&&equalBrowsers) {
+          isEqual = true;
+        }
+
         if (!isEqual) {
           // console.error(equalPlatforms, equalBrowsers, equalVersions);
           callback(new Error("\nExpected: "+util.inspect(desired,{colors:true})+" , \nActual: "+util.inspect(capabilities,{colors:true})));
