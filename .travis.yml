@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - "0.10"
-
-
----
 env:
   global:
   - secure: ! 'V9U9sLm29lbRWWnoxZMOkBBn/qtAmqDRX9bkazqghV+4odCeyLDAbBDtdwB8
