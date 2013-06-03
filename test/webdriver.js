@@ -13,7 +13,6 @@ var compareVersions  = function(a,b) {
 var comparePlatforms  = function(a,b) {
   var a = a.toLowerCase()
     , b = b.toLowerCase();
-  console.error(a, b);
   return ((a==b) ||
     (a=="windows 8"&&b=="xp") ||
     (a=="windows 7"&&b=="xp") ||
@@ -52,6 +51,8 @@ module.exports = function(browserOpts, callback) {
     , version: browserOpts.version
     , platform: browserOpts.platform
     , name: "saucelabs_browser"
+    , passed: true
+    , build: process.env.TRAVIS_BUILD_NUMBER
   }
 
   browser.init(desired, function() {
