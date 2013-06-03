@@ -20,6 +20,7 @@ var comparePlatforms  = function(a,b) {
     (a=="windows 7"&&b=="windows") ||
     (a=="windows 8"&&b=="windows") ||
     (a=="windows xp"&&b=="windows") ||
+    (a=="windows xp"&&b=="xp") ||
 
     (a=="os x 10.6"&&b=="mac") ||
     (a=="os x 10.7"&&b=="mac") ||
