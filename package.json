@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/darvin/saucelabs-browser-list.git"
+    "url": "git://github.com/darvin/saucelabs-browsers.git"
   },
   "keywords": [
     "saucelabs"

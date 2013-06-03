@@ -6,7 +6,6 @@ var webdriver = require('wd')
 var compareVersions  = function(a,b) {
   var a = semverLoose.parse(a)
      ,b = semverLoose.parse(b)
-  console.error(a,b);
   return (a.major==b.major)&&
       ((a.minor==b.minor)||(!a.minor||!b.minor));
 };
@@ -14,11 +13,18 @@ var compareVersions  = function(a,b) {
 var comparePlatforms  = function(a,b) {
   var a = a.toLowerCase()
     , b = b.toLowerCase();
+  console.error(a, b);
   return ((a==b) ||
-    (a.match(/xp/)&&b.match(/xp/)) ||
     (a=="windows 8"&&b=="xp") ||
     (a=="windows 7"&&b=="xp") ||
-    (a.match(/os x/&&b=="mac"))
+    (a=="windows 7"&&b=="windows") ||
+    (a=="windows 8"&&b=="windows") ||
+    (a=="windows xp"&&b=="windows") ||
+
+    (a=="os x 10.6"&&b=="mac") ||
+    (a=="os x 10.7"&&b=="mac") ||
+    (a=="os x 10.8"&&b=="mac")
+
     );
 };
 

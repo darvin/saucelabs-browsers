@@ -7,8 +7,10 @@ var PLATFORMS_URL = "https://saucelabs.com/docs/platforms"
   , path = require("path")
   , _ = require("underscore");
 
-var platformAlias = function(platformAliases, platformName) {
+var platformAlias = function(platformAliases, browser, platformName) {
   var newPlatformName = platformAliases[platformName];
+  if (browser.toLowerCase()=="android")
+    newPlatformName = "android";
   return newPlatformName? newPlatformName: platformName;
 };
 
@@ -28,9 +30,9 @@ request(PLATFORMS_URL, function(err, response, body){
       _.each(browsersData, function(browsersByOs, os){
         _.each(browsersByOs, function(browserVersions, browser){
           _.each(browserVersions, function(browserVersion) {
-            browsersResult.push({
+              browsersResult.push({
               browserName:browser,
-              platform: platformAlias(window.os_consumer, browserVersion.full_os),
+              platform: platformAlias(window.os_consumer, browser, browserVersion.full_os),
               version: browserVersion.version
             });
           })

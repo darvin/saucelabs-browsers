@@ -551,7 +551,7 @@
   },
   {
     "browserName": "Android",
-    "platform": "Linux",
+    "platform": "android",
     "version": "4.0.4."
   },
   {
