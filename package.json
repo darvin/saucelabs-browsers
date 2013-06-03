@@ -1,0 +1,32 @@
+{
+  "name": "saucelabs-browser-list",
+  "version": "0.0.1",
+  "description": "Lists available browsers on SauceLabs in nice formats",
+  "main": "index.js",
+  "scripts": {
+    "test": "./build.js && tape test/build_test.js",
+    "prepublish": "./build.js"
+  },
+  "devDependencies": {
+    "jsdom": "*",
+    "request": "*",
+    "underscore": "*",
+    "tape": "*",
+    "wd": "*",
+    "assert": "*",
+    "async": "*",
+    "semver-loose": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/darvin/saucelabs-browser-list.git"
+  },
+  "keywords": [
+    "saucelabs"
+  ],
+  "author": "Sergey Klimov <sergey.v.klimov@gmail.com> (http://darvin.github.com/)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/darvin/saucelabs-browser-list/issues"
+  }
+}
